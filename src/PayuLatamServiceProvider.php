@@ -15,7 +15,8 @@ class PayuLatamServiceProvider extends ServiceProvider
     public function boot()
     {
         
-        $this->loadViewsFrom(realpath(__DIR__.'/../views'), 'Payulatam');
+        $this->loadViewsFrom(realpath(__DIR__.'/views'), 'payulatam');
+        $this->loadTranslationsFrom(__DIR__.'/lang', 'payulatam');
 		$this->setupRoutes($this->app->router);
         
         // this  for config
