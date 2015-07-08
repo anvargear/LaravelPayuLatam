@@ -1,17 +1,25 @@
 {
     "name": "anvarco/payulatam",
     "description": "Payulatam form laravel provides an expressive, fluent interface to PayuLatam subscription billing services.",
-    "type": "dev",
+    "version": "0.0.2-dev",
+    "type": "project",
     "require": {
         "php": "5.5.9",
+        "anvarco/sdkpayu": "1.0.*",
         "laravel/framework": "5.*"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "AnvarStudios.CO labs",
-            "email": "webmaster@anvarstudios.co"
+            "name": "AnvarStudios.CO Labs",
+            "email": "webmaster@anvarstudios.co",
+            "homepage": "http://www.anvarstudios.co",
+            "role": "Developer"
         }
     ],
+    "support": {
+      "email": "webmaster@anvarstudios.co",
+      "wiki": "https://github.com/anvarstudios/LaravelPayuLatam/wiki"
+    },
     "minimum-stability": "dev"
 }
