@@ -4,7 +4,7 @@
     "version": "0.0.2-dev",
     "type": "project",
     "require": {
-        "php": "5.5.9",
+        "php": ">=5.5.9",
         "anvarco/sdkpayu": "1.0.*",
         "laravel/framework": "5.*"
     },
