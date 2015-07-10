@@ -20,5 +20,8 @@
     "support": {
       "email": "webmaster@anvarstudios.co",
       "wiki": "https://github.com/anvarstudios/LaravelPayuLatam/wiki"
-    }
+    },
+    "autoload": {
+      "AnvarCO\\PayuLatam\\": "src/" }
+    },
 }
