@@ -1,29 +1,42 @@
 {
-    "name": "anvarco/payulatam",
-    "description": "Payulatam form laravel provides an expressive, fluent interface to PayuLatam subscription billing services.",
-    "version": "0.0.3-dev",
-    "type": "project",
-    "require": {
-        "php": ">=5.5.9",
-        "anvarco/sdkpayu": "1.0.*",
-        "laravel/framework": "5.*"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "AnvarStudios.CO Labs",
-            "email": "webmaster@anvarstudios.co",
-            "homepage": "http://www.anvarstudios.co",
-            "role": "Developer"
-        }
-    ],
-    "support": {
+  "name": "anvarco/payulatam",
+  "description": "Payulatam form laravel provides an expressive, fluent interface to PayuLatam subscription billing services.",
+  "version": "0.0.3-dev",
+  "type": "project",
+  "require": {
+    "php": ">=5.5.9"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.8.*",
+    "orchestra/testbench": "~3.1"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "AnvarStudios.CO Labs",
       "email": "webmaster@anvarstudios.co",
-      "wiki": "https://github.com/anvarstudios/LaravelPayuLatam/wiki"
+      "homepage": "http://www.anvarstudios.co",
+      "role": "Developer"
     },
-    "autoload": {
-        "psr-4": {
-            "AnvarCO\\PayuLatam\\": "src/"
-        }
+    {
+      "name": "Jose Luis Fonseca",
+      "email": "jose@ditecnologia.com",
+      "homepage": "https://www.josefonseca.me",
+      "role": "Developer"
     }
+  ],
+  "support": {
+    "email": "webmaster@anvarstudios.co",
+    "wiki": "https://github.com/anvarstudios/LaravelPayuLatam/wiki"
+  },
+  "autoload": {
+    "psr-4": {
+      "AnvarCO\\PayuLatam\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AnvarCO\\PayuLatam\\Tests\\": "tests/"
+    }
+  }
 }
