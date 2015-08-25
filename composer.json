@@ -1,7 +1,6 @@
 {
   "name": "anvarco/payulatam",
   "description": "Payulatam form laravel provides an expressive, fluent interface to PayuLatam subscription billing services.",
-  "version": "0.0.3-dev",
   "type": "project",
   "require": {
     "php": ">=5.5.9"
