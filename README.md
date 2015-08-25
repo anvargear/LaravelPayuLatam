@@ -1,7 +1,5 @@
 # PayuLatam for Laravel
 
-
-
 ## Introduction
 
 Documentation for PayuLatam provides an expressive, fluent interface to [PayuLatam](https://secure.payulatam.com/online_account/507740/create_account.html) subscription billing services. It handles almost all of the boilerplate subscription billing code you are dreading writing. In addition to basic subscription management, Cashier can handle coupons, swapping subscription, subscription "quantities", cancellation grace periods, and even generate invoice PDFs.
