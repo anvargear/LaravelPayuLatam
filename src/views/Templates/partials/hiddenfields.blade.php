@@ -1,5 +1,5 @@
 <input name="merchantId"    type="hidden"  value="{{$merchantId}}" />
-<input name="accountId"     type="hidden"  value="{{$merchantId}}" />
+<input name="accountId"     type="hidden"  value="{{$accountId}}" />
 <input name="description"   type="hidden"  value="{{$description}}" />
 <input name="referenceCode" type="hidden"  value="{{$referenceCode}}" />
 <input name="amount"        type="hidden"  value="{{$amount}}" />

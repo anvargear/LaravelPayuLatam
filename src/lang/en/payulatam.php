@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    
+
     'project'              => [
         'title' => 'PayuLatam for Laravel',
         'descriptions'    => 'The :attribute must be between :min and :max kilobytes.',
@@ -9,6 +9,7 @@ return array(
     ],
     'prev' => '&laquo;',
     'div'  => '...',
-    'next' => '&raquo;'
-    
+    'next' => '&raquo;',
+    'buyButton' => 'Pay Now'
+
 );

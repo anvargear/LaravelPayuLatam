@@ -21,8 +21,6 @@ class PayuLatamServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/config/payulatam.php' => config_path('payulatam.php'),
         ]);
-
-
     }
 
     /**

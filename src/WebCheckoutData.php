@@ -18,6 +18,10 @@ class WebCheckoutData
     /**
      * @var
      */
+    private $accountId;
+    /**
+     * @var
+     */
     private $apiKey;
     /**
      * @var
@@ -125,7 +129,7 @@ class WebCheckoutData
     {
         return [
             'merchantId' => $this->merchantId,
-            'accountId' => $this->merchantId,
+            'accountId' => $this->accountId,
             'description' => $this->description,
             'referenceCode' => $this->referenceCode,
             'currency' => $this->currency,
@@ -157,9 +161,10 @@ class WebCheckoutData
      */
     private function setVariables()
     {
-        $this->merchantId = config('payulatam.merchantId', '123');
-        $this->apiKey = config('payulatam.apiKey', '123');
-        $this->apiLogin = config('payulatam.apiLogin', '123');
+        $this->merchantId = config('payulatam.merchantId', '500238');
+        $this->accountId = config('payulatam.accountId', '500538');
+        $this->apiKey = config('payulatam.apiKey', '6u39nqhq8ftd0hlvnjfs66eh8c');
+        $this->apiLogin = config('payulatam.apiLogin', '11959c415b33d0c');
         $this->lang = config('payulatam.language', 'es');
         $this->currency = config('payulatam.currency', 'COP');
         $this->test = config('payulatam.test', true);
