@@ -1,6 +1,10 @@
+# Migration
+
+Please copy the migration from the migrations folder in this package to your app and run `php artisan:migrate`
+
 # Web Checkout Class
 
-This class will alow you to generate the signature and will hold all the informtion needed to build a form for the web checkout endpoint in PayU Latam.
+This class will alow you to generate the signature and will hold all the information needed to build a form for the web checkout endpoint in PayU Latam.
 
  ## Env file
 
@@ -35,3 +39,35 @@ This class will alow you to generate the signature and will hold all the informt
      $form = new PayuLatamForm($webCheckout);
      echo $form->getForm();
  ```
+ Don't forget to add this endpoint to the except property in the VerifyCsfrToken Middleware
+
+ ```
+    'payu/confirmation'
+ ```
+
+ Something like this
+
+ ```php
+
+    namespace App\Http\Middleware;
+
+    use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
+
+    class VerifyCsrfToken extends BaseVerifier
+    {
+        /**
+         * The URIs that should be excluded from CSRF verification.
+         *
+         * @var array
+         */
+        protected $except = [
+            'payu/confirmation'
+        ];
+    }
+
+ ```
+
+ #Events
+
+ The package fires 2 events in the confirmation post request `AnvarCO\PayuLatam\Events\ConfirmationArrived` once the post arrives and `AnvarCO\PayuLatam\Events\ConfirmationSaved` once the confirmation information has been added to the database.
+
