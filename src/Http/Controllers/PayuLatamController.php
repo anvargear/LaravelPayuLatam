@@ -35,7 +35,7 @@ class PayuLatamController extends Controller
     {
         Log::info('New post request from PayU');
         event(new ConfirmationArrived($request));
-        $confirmation = PayUConfirmation::create($this->formatData($request->all()));
+        $confirmation = PayUConfirmation::create($request->all());
         Log::info('Confirmation created: '.$confirmation->id);
         event(new ConfirmationSaved($confirmation));
         Log::info('Event fired');
