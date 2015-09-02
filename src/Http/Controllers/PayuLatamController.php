@@ -16,8 +16,14 @@ use Log;
 class PayuLatamController extends Controller
 {
 
-    public function response()
+    public function response(Request $request)
     {
+        Log::info('New post request from PayU');
+        event(new ConfirmationArrived($request));
+        $confirmation = PayUConfirmation::create($request->all());
+        Log::info('Confirmation created: '.$confirmation->id);
+        event(new ConfirmationSaved($confirmation));
+        Log::info('Event fired');
         return view('payulatam::response');
     }
 
