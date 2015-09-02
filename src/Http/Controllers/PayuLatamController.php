@@ -18,12 +18,12 @@ class PayuLatamController extends Controller
 
     public function response(Request $request)
     {
-        Log::info('New post request from PayU');
+        /**Log::info('New post request from PayU');
         event(new ConfirmationArrived($request));
-        $confirmation = PayUConfirmation::create($request->all());
+        $confirmation = PayUConfirmation::create($this->formatData($request->all()));
         Log::info('Confirmation created: '.$confirmation->id);
         event(new ConfirmationSaved($confirmation));
-        Log::info('Event fired');
+        Log::info('Event fired');**/
         return view('payulatam::response');
     }
 
@@ -35,10 +35,25 @@ class PayuLatamController extends Controller
     {
         Log::info('New post request from PayU');
         event(new ConfirmationArrived($request));
-        $confirmation = PayUConfirmation::create($request->all());
+        $confirmation = PayUConfirmation::create($this->formatData($request->all()));
         Log::info('Confirmation created: '.$confirmation->id);
         event(new ConfirmationSaved($confirmation));
         Log::info('Event fired');
         return response()->json(['ok' => true]);
+    }
+
+    protected function formatData(array $data)
+    {
+        return [
+            'reference_sale' => (int) $data['referenceCode'],
+            'state_pol' => (int) $data['transactionState'],
+            'response_code_pol' => (int) $data['polResponseCode'],
+            'reference_pol' => $data['reference_pol'],
+            'sign' => $data['signature'],
+            'payment_method' => $data['polPaymentMethod'],
+            'value' => (float) $data['TX_VALUE'],
+            'tax' => (float) $data['TX_TAX'],
+            'transaction_date' => $data['processingDate']
+        ];
     }
 }
