@@ -8,6 +8,6 @@ return array(
 
     ],
     'admin' => 'Administrador',
-
+    'buyButton' => 'Pagar ahora'
     
 );
